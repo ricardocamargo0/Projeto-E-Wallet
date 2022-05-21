@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="./css/responsive.css">
+    
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./img/logo2.png">
+                    <h2>E-Wallet</h2>
+                </div>
+                <div class="fechar" id="ext-btn">
+                    <h3><span class="material-icons-sharp">close</span></h3>
+                </div>
+            </div>
+            <!-----------------------Barra lateral------------------------->
+            <div class="sidebar">
+                <a href="#">
+                    <h3><span class="material-icons-sharp">dashboard</span> Resumo</h3>                    
+                </a>
+                <a href="#">
+                    <h3><span class="material-icons-sharp">payment</span> Custos Fixos</h3>                    
+                </a>
+                <a href="#">
+                    <h3><span class="material-icons-sharp">add_shopping_cart</span> Gastos Variaveis</h3>                    
+                </a>
+                <a href="#">
+                    <h3><span class="material-icons-sharp">account_balance</span> Investimentos</h3>                    
+                </a>
+                <a href="#">
+                    <h3><span class="material-icons-sharp">savings</span> Reserva</h3>                    
+                </a>
+                <a href="#">
+                    <h3><span class="material-icons-sharp">inventory</span> Projetos</h3>                    
+                </a>
+                <a href="#">
+                    <h3><span class="material-icons-sharp">explore</span> Viagens</h3>                    
+                </a>
+                <a href="#">
+                    <h3><span class="material-icons-sharp">school</span> Educação</h3>                    
+                </a>
+                
+            </div>
+            <!-----------------------Final da barra lateral---------------->
+        </aside>
+        <main>
+                <h1>Dashboard</h1>
+
+                <div class="date">
+                    <input type="date">
+                </div>
+
+                <div class="insights">
+                    <!-----------------Card Valor Liquido------------------>
+                    <div class="liquido">
+                        <h3><span class="material-icons-sharp">attach_money</span></h3>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Valor Liquido</h3>
+                                <h1>R$1000,00</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx='38' cy='38' r='38'></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>10%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Ultimo Mês</small>
+                    </div>
+                    <!--------------Final do Valor Liquido----------------->
+                    <!---------------------Card Dividas-------------------->
+                    <div class="dividas">
+                        <h3><span class="material-icons-sharp">payment</span></h3>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Valor Pago</h3>
+                                <h1>R$1000,00</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx='38' cy='38' r='38'></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>10%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Ultimo Mês</small>
+                    </div>
+                    <!---------------------Final Dividas------------------->
+                    <!-----------------Card Investimentos------------------>
+                    <div class="investimentos">
+                        <h3><span class="material-icons-sharp">account_balance</span></h3>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Valor Investido</h3>
+                                <h1>R$100,00</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx='38' cy='38' r='38'></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>10%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Ultimo Mês</small>
+                    </div>
+                    <!-----------------Final Investimentos----------------->
+                </div>
+                <div class="compras-recentes">
+                    <h2>Ultimas Compras</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Preço</th>
+                                <th>Metodo de pagamento</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </main>
+    </div>
+
+</body>

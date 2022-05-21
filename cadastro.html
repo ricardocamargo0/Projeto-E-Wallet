@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-3">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/cadastro.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <img class="imglogo" src="./img/logo.png">
+        </div>
+    </header>
+    <form class="form" action="./login.html">
+    <div class="card">
+        <div class="card-top">
+            <img class="imglogin" src="./img/user.png" alt="">
+            <h2>Cadastro</h2>
+            <p>Preencha todas as informações</p>
+        </div>
+
+        <div class="card-group">
+            <label>Usuario</label>
+            <input type="text" name="name" placeholder="Seu nome completo" required> </input>
+        </div>
+        <div class="card-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="digite seu email" required></input>
+        </div>
+        <div class="card-group">
+            <label>Senha</label>
+            <input type="password" name="senha" placeholder="digite sua senha" required></input>
+        </div>
+        <div class="card-group">
+            <label>Repita a Senha</label>
+            <input type="password" name="confirme-senha" placeholder="confirme sua senha" required></input>
+        </div>
+        <div class="card-group btn">
+           <button type="post" onclick="validatePassword">Criar sua conta</button>
+        </div>
+    </div>
+    </form>
+
+</body>
+</html>
