@@ -11,9 +11,9 @@ body{
     background-position-x: -6px;
 }
 .form{
-    width: 400px;
+    width: 28vw;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 45px;
 }
 
 .card{
@@ -21,6 +21,7 @@ body{
     background-color: rgb(181, 178, 174);
     padding: 50px;
     border-radius: 7px;
+    height: 55vh;
 }
 
 .card-top{
@@ -34,7 +35,7 @@ body{
 .card-group > label{
     width: 10%;
     color: rgb(0, 0, 0);
-    display: block;
+    display: flex;
 }
 
 .card-group > input{
@@ -61,7 +62,7 @@ body{
 
 .imglogin{
     border-radius: 50px;
-    width: 70px;
+    width: 60px;
     box-shadow: 1px 1px 5px rgb(69, 69, 69);
     background-color: rgb(207, 206, 206);
 }
@@ -69,7 +70,7 @@ body{
 .imglogo{
     margin: auto;
     margin-left: 15%;
-    margin-top: 15px;
+    margin-top: 7px;
     margin-bottom: 5px;
 }
 .btn button:hover{
