@@ -34,14 +34,20 @@
         </div>
         <div class="card-group">
             <label>Senha</label>
-            <input type="password" name="senha" placeholder="digite sua senha" required></input>
+            <input type="password" placeholder="digite sua senha" id="senha"></input>
         </div>
         <div class="card-group">
             <label>Repita a Senha</label>
-            <input type="password" name="confirme-senha" placeholder="confirme sua senha" required></input>
+            <input type="password" placeholder="confirme sua senha"  id="repeteSenha"></input>
         </div>
         <div class="card-group btn">
-           <button type="post" onclick="validatePassword">Criar sua conta</button>
+           <button  onclick="validatePassword()">Criar sua conta</button>
+        </div>
+        <div id="success" class="alert alert-success" style="display: none;" role="alert">
+            <strong>Oba!</strong> conta criada com sucesso
+        </div>
+        <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+            <strong>Ops!</strong> senhas diferentes
         </div>
     </div>
     </form>
