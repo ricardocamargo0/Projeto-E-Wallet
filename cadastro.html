@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-3">
+    <!-- Bug corrigido: charset era UTF-3, deve ser UTF-8 -->
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Login</title>
-
+    <title>E-Wallet — Cadastro</title>
     <link rel="stylesheet" href="css/cadastro.css">
-    
 </head>
 <body>
     <header>
         <div class="logo">
-        <img class="imglogo" src="./img/logo.png">
+            <img class="imglogo" src="./img/logo.png" alt="E-Wallet Logo">
         </div>
     </header>
-    <form class="form" action="./login.html">
-    <div class="card">
-        <div class="card-top">
-            <img class="imglogin" src="./img/user.png" alt="">
-            <h2>Cadastro</h2>
-            <p>Preencha todas as informações</p>
-        </div>
 
-        <div class="card-group">
-            <label>Usuario</label>
-            <input type="text" name="name" placeholder="Seu nome completo" required> </input>
+    <form class="form" action="./login.html" onsubmit="return validatePassword()">
+        <div class="card">
+            <div class="card-top">
+                <img class="imglogin" src="./img/user.png" alt="Usuário">
+                <h2>Cadastro</h2>
+                <p>Preencha todas as informações</p>
+            </div>
+
+            <div class="card-group">
+                <label for="nome">Usuário</label>
+                <input type="text" id="nome" name="name" placeholder="Seu nome completo" required>
+            </div>
+            <div class="card-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            </div>
+            <div class="card-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+            </div>
+            <div class="card-group">
+                <label for="repeteSenha">Repita a Senha</label>
+                <input type="password" id="repeteSenha" placeholder="Confirme sua senha" required>
+            </div>
+            <div class="card-group btn">
+                <!-- Bug corrigido: o form agora usa onsubmit, o button é type="submit" -->
+                <button type="submit">Criar sua conta</button>
+            </div>
+
+            <!-- Alertas de feedback -->
+            <div id="success" class="alert alert-success" style="display: none;" role="alert">
+                <strong>Oba!</strong> Conta criada com sucesso!
+            </div>
+            <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+                <strong>Ops!</strong> Senhas diferentes.
+            </div>
         </div>
-        <div class="card-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="digite seu email" required></input>
-        </div>
-        <div class="card-group">
-            <label>Senha</label>
-            <input type="password" placeholder="digite sua senha" id="senha"></input>
-        </div>
-        <div class="card-group">
-            <label>Repita a Senha</label>
-            <input type="password" placeholder="confirme sua senha"  id="repeteSenha"></input>
-        </div>
-        <div class="card-group btn">
-           <button  onclick="validatePassword()">Criar sua conta</button>
-        </div>
-        <div id="success" class="alert alert-success" style="display: none;" role="alert">
-            <strong>Oba!</strong> conta criada com sucesso
-        </div>
-        <div id="error" class="alert alert-danger" style="display: none;" role="alert">
-            <strong>Ops!</strong> senhas diferentes
-        </div>
-    </div>
     </form>
 
+    <script src="./js/cadastro.js"></script>
 </body>
-<script src="./js/cadastro.js"></script>
 </html>

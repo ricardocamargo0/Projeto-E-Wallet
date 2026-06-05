@@ -1,51 +1,53 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-body{
+body {
     background-image: url(../img/bg-login.png);
     background-size: cover;
     background-color: #181818;
     background-position-y: -100px;
     background-position-x: -6px;
 }
-.form{
+
+.form {
     width: 400px;
     margin: auto;
     margin-top: 70px;
 }
 
-.card{
+.card {
     box-shadow: 1px 1px 5px rgb(69, 69, 69);
     background-color: rgb(181, 178, 174);
     padding: 50px;
     border-radius: 7px;
 }
 
-.card-top{
+.card-top {
     text-align: center;
 }
-.card-group{
+
+.card-group {
     margin-bottom: 10px;
     text-align: left;
 }
 
-.card-group > label{
+.card-group > label {
     width: 40%;
     color: rgb(0, 0, 0);
     display: block;
 }
 
-.card-group > input{
+.card-group > input {
     border-radius: 5px;
     outline: 0;
     width: 100%;
-    height: 15px;
+    height: 30px;
     padding: 5px;
-    
+    box-sizing: border-box;
 }
-.card-group > button{
+
+.card-group > button {
     background-image: linear-gradient(to right, #273B64, #002F5D);
     width: 100%;
     border-radius: 30px;
@@ -53,22 +55,51 @@ body{
     color: white;
     border: 0px;
     outline: 0px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
+.btn button:hover {
+    background-image: linear-gradient(to right, #182743, #031b31);
+}
 
-.imglogin{
+.imglogin {
     border-radius: 50px;
     width: 70px;
     box-shadow: 1px 1px 5px rgb(69, 69, 69);
     background-color: rgb(207, 206, 206);
 }
 
-.imglogo{
+.imglogo {
     margin: auto;
     margin-left: 15%;
     margin-top: 15px;
     margin-bottom: 5px;
 }
-.btn button:hover{
-    background-image: linear-gradient(to right, #182743, #031b31);
+
+/* Alertas — estavam sem estilo no CSS original */
+.alert {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 450px) {
+    .form {
+        width: 95%;
+        margin-top: 30px;
+    }
 }

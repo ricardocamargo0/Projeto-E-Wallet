@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,600;0,700;0,800;1,100&display=swap');
 
-/*root foi do site (aprender a configurar root)*/
 :root {
-    --color-primary:#7380ec;
+    --color-primary: #7380ec;
     --color-danger: #ff7782;
     --color-succes: #41f1b6;
     --color-warning: #ffbb55;
     --color-white: #fff;
-    --color-info-dark:#7d8da1;
-    --color-info-light:#dce1eb;
-    --color-dark:#363949;
-    --color-light:rgba(132, 139, 200, 0.18);
-    --color-primary-variant:#111e88;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
 
@@ -21,12 +20,38 @@
     --border-radius-3: 1.2rem;
 
     --card-padding: 1.8rem;
-    --padding-1: 1..2rem;
+    --padding-1: 1.2rem;
 
-    --box-shadow: 0 2rem 3rem var(--color-light);   
+    --box-shadow: 0 2rem 3rem var(--color-light);
 }
-/* limpar config padrão de navegadores */
-*{
+
+/* ======= TEMA ESCURO ======= */
+body.dark-theme {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+body.dark-theme .right .theme-toggler {
+    background: var(--color-primary-variant);
+}
+
+body.dark-theme .right .theme-toggler span:last-child {
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+body.dark-theme .right .theme-toggler span:first-child {
+    background: transparent;
+    color: var(--color-dark);
+}
+
+/* limpar config padrão */
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -34,14 +59,14 @@
     border: 0;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 14px;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     font-family: poppins, sans-serif;
@@ -52,80 +77,44 @@ body{
     color: var(--color-dark);
 }
 
-.container{
+.container {
     display: grid;
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
 }
-a{
+
+a {
     color: var(--color-dark);
 }
 
-img{
+img {
     display: block;
     width: 100%;
 }
 
-h1{
-    font-weight: 800;
-    font-size: 1.8rem;   
-}
+h1 { font-weight: 800; font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 0.87rem; }
+h4 { font-size: 0.8rem; }
+h5 { font-size: 0.77rem; }
+small { font-size: 0.75rem; }
 
-h2{
-    font-size: 1.4rem;
-}
+.text-muted { color: var(--color-info-dark); }
+p { color: var(--color-dark-variant); }
+b { color: var(--color-dark); }
+.primary { color: var(--color-primary); }
+.success { color: var(--color-succes); }
 
-h3{
-    font-size: 0.87rem;
-}
-
-h4{
-    font-size: 0.8rem;
-}
-
-h5{
-    font-size: 0.77rem;
-}
-
-small{
-    font-size: 0.75rem;
-}
-
-.usr-img{
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.text-muted{
-    color: var(--color-info-dark);
-}
-
-p{
-    color: var(--color-dark-variant);
-}
-
-b{
-    color: var(--color-dark);
-}
-
-.primary{
-    color: var(--color-primary);
-}
-.success{
-    color: var(--color-succes);
-}
-
-aside{
+/* ===== ASIDE / SIDEBAR ===== */
+aside {
     height: 100vh;
     width: 210px;
 }
 
-aside .top{
-    background: white;
+aside .top {
+    background: var(--color-white);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -134,24 +123,23 @@ aside .top{
     border-radius: var(--border-radius-3);
 }
 
-aside .logo{
+aside .logo {
     display: flex;
     gap: 0.8rem;
+    align-items: center;
 }
 
-aside .logo img{
+aside .logo img {
     width: 2rem;
     height: 2rem;
 }
 
-aside .close{
-    display: none;
+aside .fechar {
+    cursor: pointer;
 }
 
-/* -----------------sidebar---------------- */
-
-aside .sidebar{
-    background: white;
+aside .sidebar {
+    background: var(--color-white);
     display: flex;
     flex-direction: column;
     height: 86vh;
@@ -160,11 +148,9 @@ aside .sidebar{
     border-radius: var(--border-radius-3);
 }
 
-aside h3{
-    font-weight: 500;
-}
+aside h3 { font-weight: 500; }
 
-aside .sidebar a{
+aside .sidebar a {
     display: flex;
     color: var(--color-info-dark);
     margin-left: 2rem;
@@ -175,37 +161,21 @@ aside .sidebar a{
     transition: all 300ms ease;
 }
 
-aside .sidebar a span{
-    font-size: 1.6rem;
-}
+aside .sidebar a span { font-size: 1.6rem; }
 
-aside .sidebar a.active{
-    color: var(--color-primary);
-}
+aside .sidebar a.active { color: var(--color-primary); }
 
+aside .sidebar a:hover { color: var(--color-primary); }
 
-
-aside .sidebar a.span{
-    color: var(--color-primary);
-    margin-left: calc(1rem - 3px);
-}
-
-aside .sidebar a:hover{
-    color: var(--color-primary);
-}
-
-aside .sidebar a:hover span{
+aside .sidebar a:hover span {
     margin-left: 1rem;
     transition: all 300ms ease;
-
 }
 
-/* ---------------------MAIN--------------------- */
-main{
-    margin-top: 1.4rem;
-}
+/* ===== MAIN ===== */
+main { margin-top: 1.4rem; }
 
-main .date{
+main .date {
     display: inline-block;
     background: var(--color-light);
     border-radius: var(--border-radius-1);
@@ -213,34 +183,29 @@ main .date{
     padding: 0.5rem 1.6rem;
 }
 
-main .date input[type='date']{
+main .date input[type='date'] {
     background: transparent;
     color: var(--color-dark);
 }
 
-main .insights{
+main .insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
 }
 
-main .insights > div{
-    background: var(--color-white) ;
+main .insights > div {
+    background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
-    width: 20vw;
-    height: 35vh;
     transition: all 300ms ease;
-    
 }
 
-main .insights > div:hover{
-    box-shadow: none;
-}
+main .insights > div:hover { box-shadow: none; }
 
-main .insights > div span{
+main .insights > div span {
     background: var(--color-primary);
     padding: 0.5rem;
     border-radius: 50%;
@@ -248,65 +213,61 @@ main .insights > div span{
     font-size: 2rem;
 }
 
-main .insights > div.dividas span{
-    background: var(--color-danger);
-}
-main .insights > div.investimentos span{
-    background: var(--color-succes);
-}
+main .insights > div.dividas span { background: var(--color-danger); }
+main .insights > div.investimentos span { background: var(--color-succes); }
 
-main .insights > div .middle{
+main .insights > div .middle {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
-main .insights .progress{
-    position: absolute;
-    padding-top: 6.3rem;
+main .insights .progress {
+    position: relative;
     width: 92px;
     height: 92px;
     border-radius: 50%;
 }
 
-main .insights svg{
+main .insights svg {
     width: 7rem;
     height: 7rem;
 }
 
-main .insights svg circle{
+main .insights svg circle {
     fill: none;
     stroke: var(--color-primary);
     stroke-width: 14;
     stroke-linecap: round;
     transform: translate(8px, 8px);
-
+    stroke-dasharray: 238;
+    stroke-dashoffset: 238;
+    transition: stroke-dashoffset 1s ease-in-out;
 }
 
-main .insights .progress .number{
+main .insights > div.dividas svg circle { stroke: var(--color-danger); }
+main .insights > div.investimentos svg circle { stroke: var(--color-succes); }
+
+main .insights .progress .number {
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 9.5rem;
-    height: 100%;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-main .compras-recentes{
-    padding: 15px;
-    margin-left: 5px;
-    height: 45px;
-    width: 100%;
-}
-main .compras-recentes h2{
-    margin-bottom: 0.8rem;
+/* Bug corrigido: height: 45px cortava a tabela de compras */
+main .compras-recentes {
+    margin-top: 2rem;
 }
 
-main .compras-recentes table{
+main .compras-recentes h2 { margin-bottom: 0.8rem; }
+
+main .compras-recentes table {
     background: var(--color-white);
     width: 100%;
     border-radius: var(--card-border-radius);
@@ -316,23 +277,35 @@ main .compras-recentes table{
     transition: all 300ms ease;
 }
 
-main .compras-recentes table:hover{
-    box-shadow: var(--box-shadow);
-    box-sizing: 3px;
+main .compras-recentes table:hover { box-shadow: none; }
+
+main .compras-recentes table thead th {
+    padding: 0.6rem 1rem;
+    color: var(--color-dark-variant);
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-info-light);
 }
 
-.right {
-    margin-top: 1.4rem;
+main .compras-recentes table tbody td {
+    padding: 0.6rem 1rem;
+    color: var(--color-dark-variant);
 }
+
+/* ===== RIGHT PANEL ===== */
+.right { margin-top: 1.4rem; }
 
 .right .top {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 2rem;
+    align-items: center;
 }
 
 .right .top button {
     display: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dark);
 }
 
 .right .theme-toggler {
@@ -355,11 +328,6 @@ main .compras-recentes table:hover{
     justify-content: center;
 }
 
-.right .profile-photo  {
-    border-radius: 15px;
-    width: 25px;
-}
-
 .right .theme-toggler span.active {
     background: var(--color-primary);
     color: white;
@@ -368,31 +336,76 @@ main .compras-recentes table:hover{
 
 .right .top .profile {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     text-align: right;
+    align-items: center;
 }
 
-/* ============== media queries ========================*/
+.right .profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.right .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== MEDIA QUERIES ===== */
 @media screen and (max-width: 1200px) {
-   .container{
-    width: 94%;
-    grid-template-columns: 7rem auto 23rem;
-   }
-   aside .logo h2 {
-    display: none;
-   }
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
 
-   aside .sidebar h3 {
-    display: none;
-   }
+    aside .logo h2 { display: none; }
+    aside .sidebar h3 { display: none; }
+    aside .sidebar a { width: 5.6rem; }
+}
 
-   aside .sidebar a {
-        width: 5.6rem;
-   }
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 1rem;
+    }
 
-   aside .sidebar a:last-child {
-    position: relative;
-    margin-top: 1.8rem;
-   }
-   
+    aside {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 16rem;
+        z-index: 100;
+        background: var(--color-white);
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        transition: left 300ms ease;
+    }
+
+    aside.open {
+        left: 0;
+    }
+
+    aside .logo h2 { display: block; }
+    aside .sidebar h3 { display: block; }
+    aside .sidebar a { width: auto; }
+
+    .right .top button {
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        font-size: 1.5rem;
+    }
+
+    main .insights {
+        grid-template-columns: 1fr;
+    }
+
+    main .insights > div {
+        width: 100%;
+    }
 }
